@@ -80,8 +80,8 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.andreyfesunov = {
     isNormalUser = true;
-    description = "Andrey Fesunov";
-    extraGroups = [ "networkmanager" "wheel" "nix" "group" ];
+    description = "Андрей Фесунов";
+    extraGroups = [ "networkmanager" "wheel" "nix" "docker" ];
     packages = with pkgs; [
     #  thunderbird
     ];
