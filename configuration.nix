@@ -113,7 +113,7 @@
     fish
     teams-for-linux
     libreoffice
-    go
+    go_1_24
   ];
 
   virtualisation.docker = {
