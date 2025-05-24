@@ -7,6 +7,7 @@
 {
   imports =
     [ 
+      ./home.nix
       ./system.nix
       ./hardware-configuration.nix
     ];
@@ -114,6 +115,7 @@
     teams-for-linux
     libreoffice
     go_1_24
+    pkg-config
   ];
 
   virtualisation.docker = {
