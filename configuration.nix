@@ -2,11 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
+      ./system.nix
       ./hardware-configuration.nix
     ];
 
@@ -48,12 +49,11 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-
+ 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+    layout = "us,ru";
+  }; 
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -81,7 +81,7 @@
   users.users.andreyfesunov = {
     isNormalUser = true;
     description = "Andrey Fesunov";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "nix" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -89,6 +89,8 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  programs.dconf.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
