@@ -7,6 +7,7 @@
 {
   imports =
     [ 
+      # ./flatpak.nix
       ./system.nix
       ./hardware-configuration.nix
     ];
@@ -45,6 +46,14 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+
+  # Enable flatpak
+  # services.flatpak = {
+  #   enable = true;
+  #   packages = [
+  #     "com.github.IsmaelMartinez.teams_for_linux"
+  #   ];
+  # };
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -85,12 +94,15 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+    shell = pkgs.fish;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
 
   programs.dconf.enable = true;
+
+  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -109,6 +121,7 @@
     firefox-devedition
     pre-commit
     nodejs
+    fish
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
