@@ -81,7 +81,7 @@
   users.users.andreyfesunov = {
     isNormalUser = true;
     description = "Andrey Fesunov";
-    extraGroups = [ "networkmanager" "wheel" "nix" ];
+    extraGroups = [ "networkmanager" "wheel" "nix" "group" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -113,6 +113,17 @@
     fish
     teams-for-linux
   ];
+
+  virtualisation.docker = {
+    enable = true;
+    daemon.settings = {
+      log-driver = "json-file";
+      log-opts = {
+        max-size = "10m";
+        max-file = "3";
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
