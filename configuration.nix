@@ -112,6 +112,7 @@
     nodejs
     fish
     teams-for-linux
+    libreoffice
   ];
 
   virtualisation.docker = {
