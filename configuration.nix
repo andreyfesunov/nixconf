@@ -101,11 +101,11 @@
     code-cursor
     obsidian
     thunderbird
-    outline
     telegram-desktop
     docker
     git
     firefox-devedition
+    pre-commit
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

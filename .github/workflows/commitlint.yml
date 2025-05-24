@@ -1,0 +1,13 @@
+name: commitlint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wagoid/commitlint-github-action@v6
