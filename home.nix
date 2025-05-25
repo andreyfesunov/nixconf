@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz";
 in
 {
   imports = [
@@ -10,9 +10,13 @@ in
   home-manager.users.andreyfesunov = {
     home.stateVersion = "24.11";
 
+    home.packages = with pkgs; [
+      pkg-config
+    ];
+
     programs.go = {
       enable = true;
       package = pkgs.go_1_24;
-    };
+    }; 
   };
 }
