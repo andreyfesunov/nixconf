@@ -7,6 +7,7 @@
 {
   imports =
     [ 
+      ./flatpak.nix
       ./home.nix
       ./system.nix
       ./hardware-configuration.nix
@@ -93,6 +94,8 @@
   programs.firefox.enable = true;
 
   programs.fish.enable = true;
+
+  services.flatpak.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
