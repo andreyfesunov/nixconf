@@ -117,6 +117,7 @@
     go_1_24
     pkg-config
     amnezia-vpn
+    insomnia
   ];
 
   virtualisation.docker = {
