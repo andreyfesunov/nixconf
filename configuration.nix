@@ -107,14 +107,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    git
     vim
+    wget
     neovim
     code-cursor
     obsidian
     thunderbird
     telegram-desktop
     docker
-    git
     firefox-devedition
     pre-commit
     nodejs
