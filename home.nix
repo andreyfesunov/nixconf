@@ -15,7 +15,20 @@ in
 
     home.packages = with pkgs; [
       pkg-config
+
+      # Gnome Extensions
+      gnomeExtensions.clipboard-history
     ];
+
+    dconf = {
+      enable = true;
+      settings."org/gnome/shell" = {
+      	disable-user-extensions = false;
+	enabled-extensions = with pkgs.gnomeExtensions; [
+	  clipboard-history.extensionUuid
+	];
+      };
+    };
 
     programs.go = {
       enable = true;
