@@ -12,6 +12,9 @@
       ./system.nix
       ./hardware-configuration.nix
     ];
+  
+  # Enabling flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -79,6 +82,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Enable flatpak service
+  services.flatpak.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.andreyfesunov = {
     isNormalUser = true;
@@ -94,8 +100,6 @@
   programs.firefox.enable = true;
 
   programs.fish.enable = true;
-
-  services.flatpak.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -119,7 +123,6 @@
     libreoffice
     go_1_24
     pkg-config
-    amnezia-vpn
     insomnia
   ];
 
