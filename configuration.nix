@@ -126,6 +126,7 @@
     insomnia
     ripgrep
     lazygit
+    steam
   ];
 
   virtualisation.docker = {
