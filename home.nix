@@ -13,11 +13,11 @@ in
   home-manager.users.andreyfesunov = {
     home.stateVersion = "24.11";
 
-    home.packages = with pkgs; [
-      pkg-config
+    home.packages = [
+      pkgs.pkg-config
 
       # Gnome Extensions
-      gnomeExtensions.clipboard-history
+      pkgs.gnomeExtensions.clipboard-history
     ];
 
     dconf = {

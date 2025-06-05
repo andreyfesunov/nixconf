@@ -110,7 +110,6 @@
     git
     vim
     wget
-    neovim
     code-cursor
     obsidian
     thunderbird
@@ -125,6 +124,8 @@
     go_1_24
     pkg-config
     insomnia
+    ripgrep
+    lazygit
   ];
 
   virtualisation.docker = {
