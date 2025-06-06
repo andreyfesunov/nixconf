@@ -8,13 +8,13 @@
     nixvim.url = "github:andreyfesunov/nixvim";
   };
 
-  outputs = { self, nixpkgs, nixvim, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit (self) inputs; };
       modules = [
         ./configuration.nix
-	./modules 
+	      ./modules 
       ];
     };
   };

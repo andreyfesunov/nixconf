@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 let
   home-manager = fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz";
@@ -24,9 +24,9 @@ in
       enable = true;
       settings."org/gnome/shell" = {
       	disable-user-extensions = false;
-	enabled-extensions = with pkgs.gnomeExtensions; [
-	  clipboard-history.extensionUuid
-	];
+	      enabled-extensions = with pkgs.gnomeExtensions; [
+	        clipboard-history.extensionUuid
+	      ];
       };
     };
 
