@@ -5,16 +5,18 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [ 
-      ./flatpak.nix
-      ./home.nix
-      ./system.nix
-      ./hardware-configuration.nix
-    ];
-  
+  imports = [
+    ./flatpak.nix
+    ./home.nix
+    ./system.nix
+    ./hardware-configuration.nix
+  ];
+
   # Enabling flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -54,11 +56,11 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
- 
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
-  }; 
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -89,9 +91,14 @@
   users.users.andreyfesunov = {
     isNormalUser = true;
     description = "Андрей Фесунов";
-    extraGroups = [ "networkmanager" "wheel" "nix" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "nix"
+      "docker"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
     shell = pkgs.fish;
   };
@@ -128,6 +135,8 @@
     lazygit
     steam
     nerd-fonts.zed-mono
+    elixir
+    elixir-ls
   ];
 
   virtualisation.docker = {
