@@ -6,7 +6,8 @@ let
   desiredFlatpaks = [
     "org.vinegarhq.Sober"
   ];
-in {
+in
+{
   system.userActivationScripts.flatpakManagement = {
     text = ''
       # 2. Ensure the Flathub repo is added

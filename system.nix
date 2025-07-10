@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
-
+{ ... }:
 {
-  users.groups.nix = {};
+  users.groups.nix = { };
 
   users.users.root.extraGroups = [ "nix" ];
 

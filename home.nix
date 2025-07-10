@@ -23,16 +23,16 @@ in
     dconf = {
       enable = true;
       settings."org/gnome/shell" = {
-      	disable-user-extensions = false;
-	      enabled-extensions = with pkgs.gnomeExtensions; [
-	        clipboard-history.extensionUuid
-	      ];
+        disable-user-extensions = false;
+        enabled-extensions = with pkgs.gnomeExtensions; [
+          clipboard-history.extensionUuid
+        ];
       };
     };
 
     programs.go = {
       enable = true;
       package = pkgs.go_1_24;
-    }; 
+    };
   };
 }

@@ -137,6 +137,8 @@
     nerd-fonts.zed-mono
     elixir
     elixir-ls
+    shadowsocks-rust
+    remmina
   ];
 
   virtualisation.docker = {
