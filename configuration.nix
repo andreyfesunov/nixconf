@@ -139,6 +139,7 @@
     elixir-ls
     shadowsocks-rust
     remmina
+    gcc
   ];
 
   virtualisation.docker = {

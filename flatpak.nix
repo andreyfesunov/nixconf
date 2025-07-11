@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 let
   # We point directly to 'gnugrep' instead of 'grep'
   grep = pkgs.gnugrep;
