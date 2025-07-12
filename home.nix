@@ -18,6 +18,9 @@ in
 
       # Gnome Extensions
       pkgs.gnomeExtensions.clipboard-history
+      pkgs.gnomeExtensions.gtk4-desktop-icons-ng-ding
+      pkgs.gnomeExtensions.arcmenu
+      pkgs.gnomeExtensions.dash-in-panel
     ];
 
     dconf = {
@@ -26,6 +29,9 @@ in
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
           clipboard-history.extensionUuid
+          gtk4-desktop-icons-ng-ding.extensionUuid
+          arcmenu.extensionUuid
+          dash-in-panel.extensionUuid
         ];
       };
     };
