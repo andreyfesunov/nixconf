@@ -140,6 +140,7 @@
     shadowsocks-rust
     remmina
     gcc
+    wl-clipboard
   ];
 
   virtualisation.docker = {
