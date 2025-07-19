@@ -141,6 +141,7 @@
     remmina
     gcc
     wl-clipboard
+    dotnet-sdk
   ];
 
   virtualisation.docker = {
