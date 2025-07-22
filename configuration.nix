@@ -142,6 +142,7 @@
     gcc
     wl-clipboard
     dotnet-sdk
+    dbeaver-bin
   ];
 
   virtualisation.docker = {
