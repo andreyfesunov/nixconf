@@ -143,6 +143,7 @@
     wl-clipboard
     dotnet-sdk
     dbeaver-bin
+    jetbrains-toolbox
   ];
 
   virtualisation.docker = {
