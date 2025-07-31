@@ -144,7 +144,6 @@
     dotnet-sdk
     dbeaver-bin
     jetbrains-toolbox
-    uv
   ];
 
   virtualisation.docker = {
