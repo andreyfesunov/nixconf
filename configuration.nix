@@ -144,6 +144,7 @@
     dotnet-sdk
     dbeaver-bin
     jetbrains-toolbox
+    solc-select
   ];
 
   virtualisation.docker = {
