@@ -146,6 +146,7 @@
     jetbrains-toolbox
     solc-select
     zellij
+    marp-cli
   ];
 
   virtualisation.docker = {
