@@ -147,6 +147,7 @@
     solc-select
     zellij
     marp-cli
+    pnpm
   ];
 
   virtualisation.docker = {
