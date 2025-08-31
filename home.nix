@@ -1,11 +1,9 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   home-manager = fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz";
     sha256 = "1v1r9igz2n7j65rhqspplsq5zg0g1ba4gbkq4042md4nyaf67j24";
   };
-in
-{
+in {
   imports = [
     (import "${home-manager}/nixos")
   ];
@@ -19,6 +17,7 @@ in
       # Gnome Extensions
       pkgs.gnomeExtensions.clipboard-history
       pkgs.gnomeExtensions.dash-to-dock
+      pkgs.gnomeExtensions.boost-volume
     ];
 
     dconf = {
@@ -28,6 +27,7 @@ in
         enabled-extensions = with pkgs.gnomeExtensions; [
           clipboard-history.extensionUuid
           dash-to-dock.extensionUuid
+          boost-volume.extensionUuid
         ];
       };
     };
