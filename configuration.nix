@@ -152,6 +152,7 @@
     pnpm
     nosql-booster
     mangohud
+    tor-browser
   ];
 
   virtualisation.docker = {
