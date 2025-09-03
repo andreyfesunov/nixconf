@@ -103,7 +103,13 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Fish
   programs.fish.enable = true;
+
+  # Steam
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  # programs.gamemode.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -130,7 +136,6 @@
     insomnia
     ripgrep
     lazygit
-    steam
     nerd-fonts.zed-mono
     elixir
     elixir-ls
@@ -146,6 +151,7 @@
     marp-cli
     pnpm
     nosql-booster
+    mangohud
   ];
 
   virtualisation.docker = {
