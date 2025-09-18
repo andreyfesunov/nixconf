@@ -103,6 +103,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # AmneziaVPN
+  programs.amnezia-vpn.enable = true;
+
   # Fish
   programs.fish.enable = true;
 
@@ -143,7 +146,7 @@
     remmina
     gcc
     wl-clipboard
-    dotnet-sdk
+    dotnet-sdk_9
     dbeaver-bin
     jetbrains-toolbox
     solc-select
@@ -153,6 +156,7 @@
     nosql-booster
     mangohud
     tor-browser
+    claude-code
   ];
 
   virtualisation.docker = {
