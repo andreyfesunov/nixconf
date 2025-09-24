@@ -1,8 +1,7 @@
-{ ... }:
-{
-  users.groups.nix = { };
+{...}: {
+  users.groups.nix = {};
 
-  users.users.root.extraGroups = [ "nix" ];
+  users.users.root.extraGroups = ["nix"];
 
   system.activationScripts.chownEtcNixos = ''
     chown -R root:nix /etc/nixos

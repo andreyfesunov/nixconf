@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   # We point directly to 'gnugrep' instead of 'grep'
   grep = pkgs.gnugrep;
   # 1. Declare the Flatpaks you *want* on your system
@@ -7,8 +6,7 @@ let
     "org.vinegarhq.Sober"
     "org.polymc.PolyMC"
   ];
-in
-{
+in {
   system.userActivationScripts.flatpakManagement = {
     text = ''
       # 2. Ensure the Flathub repo is added
