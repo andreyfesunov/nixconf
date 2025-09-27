@@ -163,6 +163,9 @@
     claude-code
     icu
     amnezia-vpn
+    ngrok
+    emacs
+    p7zip
   ];
 
   virtualisation.docker = {
