@@ -166,6 +166,7 @@
     ngrok
     emacs
     p7zip
+    gimp
   ];
 
   virtualisation.docker = {
