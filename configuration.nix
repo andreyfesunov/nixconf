@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   pkgs,
-  # unstable,
+  unstable,
   ...
 }: {
   imports = [
@@ -162,13 +162,13 @@
     nosql-booster
     mangohud
     tor-browser
-    claude-code
     icu
     amnezia-vpn
     ngrok
     emacs
     p7zip
     gimp
+    unstable.claude-code
   ];
 
   virtualisation.docker = {

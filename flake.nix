@@ -14,12 +14,15 @@
     nixpkgs,
     nixpkgs-unstable,
     ...
-  }: {
+  }: let system = "x86_64-linux"; in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
       specialArgs = {
         inherit (self) inputs;
-        unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+        unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
       };
       modules = [
         ./configuration.nix
