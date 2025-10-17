@@ -168,6 +168,7 @@
     emacs
     p7zip
     gimp
+    obs-studio
     unstable.claude-code
   ];
 
