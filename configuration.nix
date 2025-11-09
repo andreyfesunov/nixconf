@@ -127,7 +127,6 @@
     git
     vim
     wget
-    code-cursor
     obsidian
     thunderbird
     telegram-desktop
@@ -169,7 +168,10 @@
     p7zip
     gimp
     obs-studio
+    typescript-language-server
+    filezilla
     unstable.claude-code
+    unstable.code-cursor
   ];
 
   virtualisation.docker = {
