@@ -146,6 +146,7 @@
     liberation_ttf
     times-newer-roman
     elixir
+    erlang_28
     elixir-ls
     shadowsocks-rust
     remmina
@@ -170,6 +171,7 @@
     obs-studio
     typescript-language-server
     filezilla
+    unstable.zed-editor
     unstable.claude-code
     unstable.code-cursor
   ];

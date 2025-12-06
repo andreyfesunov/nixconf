@@ -1,7 +1,7 @@
 {pkgs, ...}: let
   home-manager = fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz";
-    sha256 = "0q3lv288xlzxczh6lc5lcw0zj9qskvjw3pzsrgvdh8rl8ibyq75s";
+    url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
+    sha256 = "1qr63a2izlp840ax3v31avji99yprw3rap2m8f1snfkxfnsh8syh";
   };
 in {
   imports = [
