@@ -171,6 +171,9 @@
     obs-studio
     typescript-language-server
     filezilla
+    putty
+    openmw
+    koreader
     unstable.zed-editor
     unstable.claude-code
     unstable.code-cursor
