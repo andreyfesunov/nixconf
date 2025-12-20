@@ -174,6 +174,9 @@
     putty
     openmw
     koreader
+    vscode
+    helix
+    chromium
     unstable.zed-editor
     unstable.claude-code
     unstable.code-cursor
