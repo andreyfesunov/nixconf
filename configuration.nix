@@ -148,6 +148,7 @@
     elixir
     erlang_28
     elixir-ls
+    nixd
     shadowsocks-rust
     remmina
     gcc
