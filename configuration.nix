@@ -177,6 +177,7 @@
     koreader
     vscode
     helix
+    yazi
     chromium
     unstable.zed-editor
     unstable.claude-code
