@@ -179,6 +179,8 @@
     helix
     yazi
     chromium
+    terraform
+    yandex-cloud
     unstable.zed-editor
     unstable.claude-code
     unstable.code-cursor
