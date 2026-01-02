@@ -181,6 +181,8 @@
     chromium
     terraform
     yandex-cloud
+    direnv
+    devbox
     unstable.zed-editor
     unstable.claude-code
     unstable.code-cursor
