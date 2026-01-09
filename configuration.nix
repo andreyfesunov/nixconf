@@ -131,13 +131,12 @@
     thunderbird
     telegram-desktop
     docker
-    firefox-devedition
     pre-commit
     nodejs
     fish
     teams-for-linux
     libreoffice
-    go_1_24
+    go
     pkg-config
     insomnia
     ripgrep
@@ -149,42 +148,29 @@
     erlang_28
     elixir-ls
     nixd
-    shadowsocks-rust
     remmina
     gcc
     wl-clipboard
     dotnet-sdk_9
     dbeaver-bin
     jetbrains-toolbox
-    solc-select
     zellij
     marp-cli
     pnpm
     nosql-booster
-    mangohud
-    tor-browser
     icu
     amnezia-vpn
-    ngrok
     emacs
     p7zip
     gimp
     obs-studio
     typescript-language-server
-    filezilla
-    putty
-    openmw
     koreader
-    vscode
-    helix
-    yazi
     chromium
     terraform
     yandex-cloud
     direnv
     devbox
-    unstable.zed-editor
-    unstable.claude-code
     unstable.code-cursor
   ];
 
