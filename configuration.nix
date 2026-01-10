@@ -137,6 +137,9 @@
     teams-for-linux
     libreoffice
     go
+    gopls
+    vscode
+    semgrep
     pkg-config
     insomnia
     ripgrep
@@ -171,6 +174,7 @@
     yandex-cloud
     direnv
     devbox
+    julia
     unstable.code-cursor
   ];
 
