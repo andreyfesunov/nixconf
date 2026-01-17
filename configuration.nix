@@ -156,6 +156,7 @@
     wl-clipboard
     dotnet-sdk_9
     python314
+    poetry
     dbeaver-bin
     jetbrains-toolbox
     zellij
