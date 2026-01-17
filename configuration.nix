@@ -155,6 +155,7 @@
     gcc
     wl-clipboard
     dotnet-sdk_9
+    python314
     dbeaver-bin
     jetbrains-toolbox
     zellij
