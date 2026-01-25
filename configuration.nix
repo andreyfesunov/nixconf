@@ -177,6 +177,8 @@
     direnv
     devbox
     julia
+    gnumake
+    filezilla
     unstable.code-cursor
   ];
 
