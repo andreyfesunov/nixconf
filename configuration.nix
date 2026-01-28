@@ -154,7 +154,7 @@
     remmina
     gcc
     wl-clipboard
-    dotnet-sdk_9
+    dotnet-sdk_10
     python314
     poetry
     dbeaver-bin
