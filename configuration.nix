@@ -179,6 +179,7 @@
     julia
     gnumake
     filezilla
+    chromium
     unstable.code-cursor
   ];
 
