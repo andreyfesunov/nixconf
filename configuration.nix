@@ -172,6 +172,7 @@
     typescript-language-server
     koreader
     chromium
+    typst
     terraform
     yandex-cloud
     direnv
@@ -179,7 +180,6 @@
     julia
     gnumake
     filezilla
-    chromium
     unstable.code-cursor
   ];
 
