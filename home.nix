@@ -1,9 +1,11 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   home-manager = fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
     sha256 = "1qr63a2izlp840ax3v31avji99yprw3rap2m8f1snfkxfnsh8syh";
   };
-in {
+in
+{
   imports = [
     (import "${home-manager}/nixos")
   ];
@@ -35,6 +37,18 @@ in {
     programs.go = {
       enable = true;
       package = pkgs.go_1_24;
+    };
+
+    programs.tmux = {
+      enable = true;
+      plugins = with pkgs; [
+        tmuxPlugins.minimal-tmux-status
+      ];
+      extraConfig = ''
+        set -g @minimal-tmux-use-arrow true
+        set -g @minimal-tmux-right-arrow ""
+        set -g @minimal-tmux-left-arrow ""
+      '';
     };
   };
 }
