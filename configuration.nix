@@ -182,6 +182,7 @@
     gnumake
     filezilla
     tmux
+    c3c
     unstable.code-cursor
   ];
 
