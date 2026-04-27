@@ -2,7 +2,7 @@
 let
   home-manager = fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-    sha256 = "1f8cv50789lanwbkf9dkshpyrnsis8wf7m7bnm9daqx88g5cvnhm";
+    sha256 = "16mcnqpcgl3s2frq9if6vb8rpnfkmfxkz5kkkjwlf769wsqqg3i9";
   };
 in
 {
