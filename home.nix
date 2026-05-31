@@ -17,9 +17,13 @@ in
       pkgs.pkg-config
 
       # Gnome Extensions
-      pkgs.gnomeExtensions.clipboard-history
       pkgs.gnomeExtensions.dash-to-dock
       pkgs.gnomeExtensions.boost-volume
+      pkgs.gnomeExtensions.appindicator
+      pkgs.gnomeExtensions.blur-my-shell
+      pkgs.gnomeExtensions.just-perfection
+      pkgs.gnomeExtensions.space-bar
+      pkgs.gnomeExtensions.static-workspace-background
     ];
 
     dconf = {
@@ -27,16 +31,39 @@ in
       settings."org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
-          clipboard-history.extensionUuid
           dash-to-dock.extensionUuid
           boost-volume.extensionUuid
+          appindicator.extensionUuid
+          blur-my-shell.extensionUuid
+          just-perfection.extensionUuid
+          space-bar.extensionUuid
+          static-workspace-background.extensionUuid
         ];
+      };
+    };
+
+    dconf.settings = {
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        ];
+      };
+
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+        name = "Vicinae Launcher";
+        command = "vicinae toggle";
+        binding = "<Super>Return";
       };
     };
 
     programs.go = {
       enable = true;
       package = pkgs.go_1_24;
+    };
+
+    programs.vicinae = {
+      enable = true;
+      systemd.enable = true;
     };
 
     programs.tmux = {
