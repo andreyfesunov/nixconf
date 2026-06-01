@@ -139,7 +139,6 @@
     libreoffice
     go
     gopls
-    vscode
     semgrep
     pkg-config
     insomnia
@@ -148,9 +147,6 @@
     nerd-fonts.zed-mono
     liberation_ttf
     times-newer-roman
-    elixir
-    erlang_28
-    elixir-ls
     nixd
     remmina
     gcc
@@ -165,21 +161,17 @@
     pnpm
     icu
     amnezia-vpn
-    emacs
     p7zip
     gimp
     obs-studio
     typescript-language-server
-    koreader
     chromium
     typst
     terraform
     yandex-cloud
     direnv
     devbox
-    julia
     gnumake
-    filezilla
     tmux
     rustup
     unstable.code-cursor
