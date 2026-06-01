@@ -26,9 +26,9 @@ in
       pkgs.gnomeExtensions.static-workspace-background
     ];
 
-    dconf = {
-      enable = true;
-      settings."org/gnome/shell" = {
+    dconf.enable = true;
+    dconf.settings = {
+      "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
           dash-to-dock.extensionUuid
@@ -40,9 +40,8 @@ in
           static-workspace-background.extensionUuid
         ];
       };
-    };
 
-    dconf.settings = {
+      # Keybinds
       "org/gnome/settings-daemon/plugins/media-keys" = {
         custom-keybindings = [
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
