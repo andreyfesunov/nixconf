@@ -139,7 +139,7 @@
     obsidian
     thunderbird
     telegram-desktop
-    docker
+    docker_29
     pre-commit
     nodejs
     fish
@@ -187,6 +187,7 @@
 
   virtualisation.docker = {
     enable = true;
+    package = pkgs.docker_29;
     daemon.settings = {
       log-driver = "json-file";
       log-opts = {
