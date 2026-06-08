@@ -13,47 +13,19 @@ in
   home-manager.users.andreyfesunov = {
     home.stateVersion = "24.11";
 
-    home.packages = [
-      pkgs.pkg-config
-
-      # Gnome Extensions
-      pkgs.gnomeExtensions.dash-to-dock
-      pkgs.gnomeExtensions.boost-volume
-      pkgs.gnomeExtensions.appindicator
-      pkgs.gnomeExtensions.blur-my-shell
-      pkgs.gnomeExtensions.just-perfection
-      pkgs.gnomeExtensions.space-bar
-      pkgs.gnomeExtensions.static-workspace-background
+    home.packages = with pkgs; [
+      pkg-config
+      fuzzel
+      swaylock
+      waybar
+      gnumake
+      swayidle
+      polkit_gnome
+      swaybg
+      ghostty
     ];
 
-    dconf.enable = true;
-    dconf.settings = {
-      "org/gnome/shell" = {
-        disable-user-extensions = false;
-        enabled-extensions = with pkgs.gnomeExtensions; [
-          dash-to-dock.extensionUuid
-          boost-volume.extensionUuid
-          appindicator.extensionUuid
-          blur-my-shell.extensionUuid
-          just-perfection.extensionUuid
-          space-bar.extensionUuid
-          static-workspace-background.extensionUuid
-        ];
-      };
-
-      # Keybinds
-      "org/gnome/settings-daemon/plugins/media-keys" = {
-        custom-keybindings = [
-          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-        ];
-      };
-
-      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-        name = "Vicinae Launcher";
-        command = "vicinae toggle";
-        binding = "<Super>Return";
-      };
-    };
+    xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
     programs.go = {
       enable = true;
