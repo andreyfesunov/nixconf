@@ -5,6 +5,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Custom Flakes
     nixvim.url = "github:andreyfesunov/nixvim";
   };
@@ -13,6 +18,7 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
+    home-manager,
     ...
   }: let
     system = "x86_64-linux";
@@ -29,6 +35,7 @@
       modules = [
         ./configuration.nix
         ./modules
+        home-manager.nixosModules.home-manager
       ];
     };
   };

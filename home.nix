@@ -1,15 +1,4 @@
-{ pkgs, ... }:
-let
-  home-manager = fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-    sha256 = "13fmry1jd0na71fxhzms9qf3ybj6shgvnphq4p1akxxmv44gzq20";
-  };
-in
-{
-  imports = [
-    (import "${home-manager}/nixos")
-  ];
-
+{ pkgs, ... }: {
   home-manager.users.andreyfesunov = {
     home.stateVersion = "24.11";
 
