@@ -182,6 +182,7 @@
     gnumake
     tmux
     rustup
+    just
     unstable.code-cursor
   ];
 
