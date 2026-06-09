@@ -1,20 +1,23 @@
-{ pkgs, ... }: {
-  home-manager.users.andreyfesunov = {
+{ unstable, ... }: {
+  home-manager.users.andreyfesunov = { pkgs, ... }: {
     home.stateVersion = "24.11";
 
     home.packages = with pkgs; [
       pkg-config
       fuzzel
       swaylock
-      waybar
       gnumake
       swayidle
       polkit_gnome
       swaybg
       ghostty
+    ] ++ [
+      # stable nixpkgs ships ashell 0.6; niri support requires 0.7+
+      unstable.ashell
     ];
 
     xdg.configFile."niri/config.kdl".source = ./config.kdl;
+    xdg.configFile."ashell/config.toml".source = ./ashell/config.toml;
 
     programs.go = {
       enable = true;

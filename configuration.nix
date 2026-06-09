@@ -52,6 +52,16 @@
     LC_TIME = "ru_RU.UTF-8";
   };
 
+  console.keyMap = "us";
+  services.xserver.xkb = {
+    layout = "us,ru";
+    options = "grp:win_space_toggle";
+  };
+
+  hardware.bluetooth.enable = true;
+
+  services.upower.enable = true;
+
   programs.niri.enable = true;
 
   security.polkit.enable = true;
