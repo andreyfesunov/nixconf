@@ -1,4 +1,4 @@
-{ unstable, ... }: {
+{ ... }: {
   home-manager.users.andreyfesunov = { pkgs, ... }: {
     home.stateVersion = "24.11";
 
@@ -11,9 +11,7 @@
       polkit_gnome
       swaybg
       ghostty
-    ] ++ [
-      # stable nixpkgs ships ashell 0.6; niri support requires 0.7+
-      unstable.ashell
+      ashell
     ];
 
     xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
@@ -21,7 +19,7 @@
 
     programs.go = {
       enable = true;
-      package = pkgs.go_1_24;
+      package = pkgs.go_1_26;
     };
 
     programs.vicinae = {
