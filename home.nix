@@ -16,7 +16,7 @@
       unstable.ashell
     ];
 
-    xdg.configFile."niri/config.kdl".source = ./config.kdl;
+    xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
     xdg.configFile."ashell/config.toml".source = ./ashell/config.toml;
 
     programs.go = {
