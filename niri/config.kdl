@@ -246,9 +246,9 @@ layout {
     // Left and right struts will cause the next window to the side to always be visible.
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
-    struts {
-        top 40
-    }
+    // struts {
+    //     top 4
+    // }
 }
 
 // Add lines like this to spawn processes at startup.
