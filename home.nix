@@ -6,9 +6,18 @@
       polkit_gnome
       ghostty
       noctalia-shell
+      cliphist
     ];
 
     xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
+    xdg.configFile."noctalia/settings.json" = {
+      source = ./noctalia/settings.json;
+      force = true;
+    };
+    xdg.configFile."noctalia/plugins.json" = {
+      source = ./noctalia/plugins.json;
+      force = true;
+    };
 
     systemd.user.services.noctalia-shell = {
       Unit = {
