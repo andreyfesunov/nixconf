@@ -5,9 +5,7 @@
     home.packages = with pkgs; [
       pkg-config
       fuzzel
-      swaylock
       gnumake
-      swayidle
       polkit_gnome
       swaybg
       ghostty
@@ -16,6 +14,8 @@
 
     xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
     xdg.configFile."ashell/config.toml".source = ./ashell/config.toml;
+    xdg.configFile."hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
+    xdg.configFile."hypr/hypridle.conf".source = ./hypr/hypridle.conf;
 
     programs.go = {
       enable = true;

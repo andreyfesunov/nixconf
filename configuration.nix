@@ -63,6 +63,7 @@
   services.upower.enable = true;
 
   programs.niri.enable = true;
+  programs.hyprlock.enable = true;
 
   security.polkit.enable = true;
 

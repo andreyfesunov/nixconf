@@ -21,7 +21,7 @@ alert_threshold = 85
 labels = { "English (US)" = "EN", "Russian" = "RU" }
 
 [settings]
-lock_cmd = "swaylock"
+lock_cmd = "hyprlock"
 logout_cmd = "niri msg action quit"
 indicators = ["Battery", "Network", "Bluetooth", "Audio", "Microphone", "Brightness"]
 battery_format = "IconAndPercentage"
