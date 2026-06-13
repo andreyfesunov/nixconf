@@ -3,19 +3,31 @@
     home.stateVersion = "24.11";
 
     home.packages = with pkgs; [
-      pkg-config
-      fuzzel
-      gnumake
       polkit_gnome
-      swaybg
       ghostty
-      ashell
+      noctalia-shell
     ];
 
     xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
-    xdg.configFile."ashell/config.toml".source = ./ashell/config.toml;
-    xdg.configFile."hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
-    xdg.configFile."hypr/hypridle.conf".source = ./hypr/hypridle.conf;
+
+    systemd.user.services.noctalia-shell = {
+      Unit = {
+        Description = "Noctalia desktop shell";
+        PartOf = [ "niri.service" ];
+        After = [
+          "niri.service"
+          "pipewire.socket"
+          "pipewire-pulse.socket"
+        ];
+        BindsTo = [ "niri.service" ];
+        Requires = [ "niri.service" ];
+      };
+      Service = {
+        ExecStart = "${pkgs.noctalia-shell}/bin/noctalia-shell";
+        Restart = "on-failure";
+      };
+      Install.WantedBy = [ "niri.service" ];
+    };
 
     programs.go = {
       enable = true;
