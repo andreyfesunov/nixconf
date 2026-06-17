@@ -193,6 +193,7 @@
     tmux
     rustup
     just
+    helix
     unstable.code-cursor
   ];
 
