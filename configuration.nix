@@ -194,6 +194,7 @@
     rustup
     just
     helix
+    gitui
     unstable.code-cursor
   ];
 
