@@ -190,6 +190,7 @@
     tmux
     rustup
     just
+    unstable.cursor-cli
     unstable.code-cursor
   ];
 
@@ -207,9 +208,12 @@
 
   programs.nix-ld.enable = true;
 
-  services.fprintd.enable = true; # fingerprint driver
-  services.fprintd.tod.enable = true;
-  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
+  services.fprintd.enable = true;
+
+  security.pam.services.login.fprintAuth = true;
+  security.pam.services.greetd.fprintAuth = true;
+  security.pam.services.sudo.fprintAuth = true;
+  security.pam.services.polkit-1.fprintAuth = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
