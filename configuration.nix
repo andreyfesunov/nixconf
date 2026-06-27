@@ -211,7 +211,7 @@
   services.fprintd.enable = true;
 
   security.pam.services.login.fprintAuth = true;
-  security.pam.services.greetd.fprintAuth = true;
+  security.pam.services.greetd.fprintAuth = false;
   security.pam.services.sudo.fprintAuth = true;
   security.pam.services.polkit-1.fprintAuth = true;
 
