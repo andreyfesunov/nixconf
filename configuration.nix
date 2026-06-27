@@ -207,6 +207,10 @@
 
   programs.nix-ld.enable = true;
 
+  services.fprintd.enable = true; # fingerprint driver
+  services.fprintd.tod.enable = true;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
