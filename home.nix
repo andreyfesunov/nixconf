@@ -41,19 +41,19 @@
         Install.WantedBy = [ "niri.service" ];
       };
 
-      systemd.user.services.polkit-gnome-authentication-agent-1 = {
-        Unit = {
-          Description = "PolicyKit authentication agent";
-          After = [ "graphical-session.target" ];
-        };
-        Service = {
-          Type = "simple";
-          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-          Restart = "on-failure";
-          RestartSec = 1;
-        };
-        Install.WantedBy = [ "graphical-session.target" ];
-      };
+      # systemd.user.services.polkit-gnome-authentication-agent-1 = {
+      #   Unit = {
+      #     Description = "PolicyKit authentication agent";
+      #     After = [ "graphical-session.target" ];
+      #   };
+      #   Service = {
+      #     Type = "simple";
+      #     ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+      #     Restart = "on-failure";
+      #     RestartSec = 1;
+      #   };
+      #   Install.WantedBy = [ "graphical-session.target" ];
+      # };
 
       programs.go = {
         enable = true;
