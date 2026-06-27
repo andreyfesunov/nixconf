@@ -174,7 +174,6 @@
     poetry
     dbeaver-bin
     jetbrains-toolbox
-    zellij
     marp-cli
     pnpm
     icu
@@ -185,16 +184,12 @@
     typescript-language-server
     chromium
     typst
-    terraform
-    yandex-cloud
     direnv
     devbox
     gnumake
     tmux
     rustup
     just
-    helix
-    gitui
     unstable.code-cursor
   ];
 
