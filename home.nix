@@ -7,7 +7,7 @@
 
       home.packages = with pkgs; [
         polkit_gnome
-        ghostty
+        wezterm
         noctalia-shell
         cliphist
       ];

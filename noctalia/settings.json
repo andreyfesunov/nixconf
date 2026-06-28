@@ -24,7 +24,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "ghostty -e",
+        "terminalCommand": "wezterm start --",
         "viewMode": "grid"
     },
     "audio": {
@@ -619,7 +619,7 @@
             },
             {
                 "enabled": true,
-                "id": "ghostty"
+                "id": "wezterm"
             }
         ],
         "enableUserTheming": true
