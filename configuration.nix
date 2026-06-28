@@ -173,8 +173,6 @@
     python314
     poetry
     dbeaver-bin
-    jetbrains-toolbox
-    marp-cli
     pnpm
     icu
     amnezia-vpn
