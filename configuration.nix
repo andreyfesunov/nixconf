@@ -143,53 +143,84 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
+    # Editors & IDEs
     vim
+    unstable.code-cursor
+
+    # LLM CLIs
+    unstable.cursor-cli
+
+    # Version control & Git workflow
+    git
+    lazygit
+    pre-commit
+
+    # Shell, terminal & CLI utilities
+    fish
+    tmux
+    ripgrep
+    wl-clipboard
     wget
+
+    # Programming languages & runtimes
+    nodejs
+    python314
+    go
+    dotnet-sdk_10
+    rustup
+
+    # Language servers, linters & tooling
+    gopls
+    typescript-language-server
+    semgrep
+    nixd
+
+    # Package managers & dev environments
+    pnpm
+    poetry
+    direnv
+    devbox
+    just
+
+    # Build tools & compilers
+    gcc
+    gnumake
+    pkg-config
+    icu
+
+    # Containers
+    docker_29
+
+    # Networking, remote access & API clients
+    remmina
+    amnezia-vpn
+    insomnia
+
+    # Office, notes & documents
+    libreoffice
     obsidian
+    typst
+
+    # Communication
     thunderbird
     telegram-desktop
-    docker_29
-    pre-commit
-    nodejs
-    fish
     teams-for-linux
-    libreoffice
-    go
-    gopls
-    semgrep
-    pkg-config
-    insomnia
-    ripgrep
-    lazygit
+
+    # Databases
+    dbeaver-bin
+
+    # Multimedia, graphics & archives
+    gimp
+    obs-studio
+    p7zip
+
+    # Fonts
     nerd-fonts.zed-mono
     liberation_ttf
     times-newer-roman
-    nixd
-    remmina
-    gcc
-    wl-clipboard
-    dotnet-sdk_10
-    python314
-    poetry
-    dbeaver-bin
-    pnpm
-    icu
-    amnezia-vpn
-    p7zip
-    gimp
-    obs-studio
-    typescript-language-server
+
+    # Browser
     chromium
-    typst
-    direnv
-    devbox
-    gnumake
-    tmux
-    rustup
-    just
-    unstable.cursor-cli
-    unstable.code-cursor
   ];
 
   virtualisation.docker = {
