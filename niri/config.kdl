@@ -3,8 +3,7 @@
 // Check the wiki for a full description of the configuration:
 // https://niri-wm.github.io/niri/Configuration:-Introduction
 
-// Noctalia theme colors (generated at ~/.config/niri/noctalia.kdl)
-include "~/.config/niri/noctalia.kdl"
+// Noctalia theme colors are included at the end of this file (~/.config/niri/noctalia.kdl)
 
 // Input device configuration.
 // Find the full list of options on the wiki:
@@ -192,7 +191,7 @@ layout {
         // Colors come from ~/.config/niri/noctalia.kdl (Noctalia template).
 
         // Color of the border around windows that request your attention.
-        urgent-color "#9b0000"
+        // urgent-color comes from ~/.config/niri/noctalia.kdl (Noctalia template).
 
         // Gradients can use a few different interpolation color spaces.
         // For example, this is a pastel rainbow gradient via in="oklch longer hue".
@@ -236,7 +235,7 @@ layout {
         offset x=0 y=5
 
         // You can also change the shadow color and opacity.
-        color "#0007"
+        // color comes from ~/.config/niri/noctalia.kdl (Noctalia template).
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -626,3 +625,7 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+// Noctalia theme colors (generated at ~/.config/niri/noctalia.kdl).
+// Included last so these colors override layout defaults above.
+include "~/.config/niri/noctalia.kdl"

@@ -16,6 +16,9 @@
       xdg.configFile."noctalia/settings.json" = {
         source = ./noctalia/settings.json;
         force = true;
+        onChange = ''
+          ${pkgs.systemd}/bin/systemctl --user restart noctalia-shell.service || true
+        '';
       };
       xdg.configFile."noctalia/plugins.json" = {
         source = ./noctalia/plugins.json;

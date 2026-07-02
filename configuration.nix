@@ -103,7 +103,11 @@
     # Don't auto-switch audio to HDMI when a monitor is plugged in.
     # One WirePlumber hook disabled; everything else is stock behaviour.
     wireplumber.extraConfig."50-no-hdmi-autoswitch" = {
-      wireplumber.profiles.main."hooks.device.routes.find-best" = disabled;
+      "wireplumber.profiles" = {
+        main = {
+          "hooks.device.routes.find-best" = "disabled";
+        };
+      };
     };
   };
 
