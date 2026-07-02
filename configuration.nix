@@ -99,6 +99,12 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
+
+    # Don't auto-switch audio to HDMI when a monitor is plugged in.
+    # One WirePlumber hook disabled; everything else is stock behaviour.
+    wireplumber.extraConfig."50-no-hdmi-autoswitch" = {
+      wireplumber.profiles.main."hooks.device.routes.find-best" = disabled;
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
