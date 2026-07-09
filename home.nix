@@ -13,6 +13,7 @@
       ];
 
       xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
+      xdg.configFile."wezterm/wezterm.lua".source = ./wezterm/wezterm.lua;
       xdg.configFile."noctalia/settings.json" = {
         source = ./noctalia/settings.json;
         force = true;
