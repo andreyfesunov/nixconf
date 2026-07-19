@@ -206,6 +206,9 @@
     amnezia-vpn
     insomnia
 
+    # Desktop & file manager
+    nautilus
+
     # Office, notes & documents
     libreoffice
     obsidian
