@@ -1,0 +1,3 @@
+# nixos configuration
+
+> **Status**: Archived.
